@@ -1,15 +1,15 @@
 def sudy_nebo_lichy(cislo):
-    return cislo % 3 == 0
+    if cislo % 2 == 0:
+        return "Číslo " + str(cislo) + " je sudé"
+    else:
+        return "Číslo " + str(cislo) + " je liché"
 
 def main():
-  cislo = int(input("Zadej číslo: "))
-    if cislo % 2 == 0:
-        return "Číslo (cislo) je sudé"
-    else:
-        return "Číslo (cislo je liché)"
+    cislo = int(input("Zadej číslo: "))
+    print(sudy_nebo_lichy(cislo))
 
+    print(sudy_nebo_lichy(5))
+    print(sudy_nebo_lichy(1000000))
 
 if __name__ == "__main__":
-    main() 
-sudy_nebo_lichy(5)
-sudy_nebo_lichy(1000000)
+    main()
